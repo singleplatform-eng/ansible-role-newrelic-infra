@@ -1,0 +1,14 @@
+---
+
+- name: Configure license key file
+  copy:
+    content: "license_key: {{newrelic_infra_license_key}}"
+    dest: /etc/newrelic-infra.yml
+
+- name: Configure package repo
+  shell: "curl -s {{newrelic_infra_repo_script}} | bash"
+  args:
+    creates: /etc/apt/sources.list.d/newrelic_infra-beta.list
+
+- name: Install package
+  package: name=newrelic-infra
