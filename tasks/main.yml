@@ -4,6 +4,7 @@
   copy:
     content: "license_key: {{newrelic_infra_license_key}}"
     dest: /etc/newrelic-infra.yml
+  notify: restart newrelic-infra
 
 - name: Configure package repo
   shell: "curl -s {{newrelic_infra_repo_script}} | bash"
