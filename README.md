@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/singleplatform-eng/ansible-role-newrelic-infra.svg?branch=master)](https://travis-ci.org/singleplatform-eng/ansible-role-newrelic-infra)
 
 ansible-role-newrelic-infra
 =========
